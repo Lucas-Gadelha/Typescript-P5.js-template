@@ -1,7 +1,7 @@
 
 # P5 TypeScript Starter
 
-This project will quickly get you something working in [p5.js](https://p5js.org/) and [typescript](https://www.typescriptlang.org/).
+This project will quickly get you something working inn [p5.js](https://p5js.org/) and [typescript](https://www.typescriptlang.org/).
 
 ## Demo
 
