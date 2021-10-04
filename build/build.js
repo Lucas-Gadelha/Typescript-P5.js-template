@@ -9,7 +9,7 @@ function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
 }
 function draw() {
-    background("gray");
+    background("pink");
     bilu.draw();
 }
 var Et = (function () {
