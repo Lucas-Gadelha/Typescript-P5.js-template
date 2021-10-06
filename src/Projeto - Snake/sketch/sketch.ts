@@ -23,11 +23,26 @@ function draw_mat(color: p5.Color) {
   }
 }
 
+function snake_limit_loop() {
+  if(snake_x == NC)
+    snake_x = 0;
+  if(snake_y == NL)
+    snake_y = 0;
+  if(snake_x == -1)
+    snake_x = NC - 1;
+  if(snake_y == -1)
+    snake_y = NL - 1;
+}
+
 function keyPressed() {
   if(keyCode === LEFT_ARROW)
-    snake_color = color(random(255), 0, 0);
+    snake_x -= 1; 
   else if(keyCode === RIGHT_ARROW)
-    snake_color = color(0, random(255), 0);
+    snake_x += 1;
+  else if(keyCode === UP_ARROW)
+    snake_y -= 1;
+  else if(keyCode === DOWN_ARROW)
+    snake_y += 1;
 }
 
 
@@ -40,7 +55,7 @@ function setup() {
 }
 
 function draw() {
+  snake_limit_loop();
   draw_mat(cell_color);
-
   draw_cel(snake_x, snake_y, snake_color);
 }
